@@ -7,8 +7,8 @@ import EditModal from './components/EditModal';
 export default function App() {
 const [title,settitle] = useState("") 
 const [desc,setDesc] = useState("") 
-const [notes,setNotes]=useState (getNotesFromLS)
-const[editid,seteditld]=useState("")
+const [notes,setNotes]=useState (getNotesFromLs)
+const[editld,seteditld]=useState("")
 localStorage.setltem("notes",JSON.stringify(notes))
   return (
     <>
@@ -20,7 +20,7 @@ localStorage.setltem("notes",JSON.stringify(notes))
         <div className="col-md-10">
           <h1 className="mb-3">Comentários</h1>
           {
-           notes.length===0 ? <div className="card mb-3">
+           notes.length===0? <div className="card mb-3">
   <div className="card-body">
     <h5 className="card-title">Mensagem</h5>
     <p className="card-text">nenhum comentário disponível para leitura</p>
@@ -36,8 +36,8 @@ localStorage.setltem("notes",JSON.stringify(notes))
       </div>
     </>
   )
-  function getNotesFromLS(){
-    const note=JSON.parse(localStorage.getitlem("notes"));
+  function getNotesFromLs(){
+    const note=JSON.parse(localStorage.getltem("notes"));
     if(note){
       return note
     }else{

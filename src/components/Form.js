@@ -7,11 +7,10 @@ if(e.target.id==="title"){
 }else{
 setDesc(e.target.value)
 }
-console.log(title,desc);
 }
 const addNotesHandler=(e)=>{
 e.preventDefault()
-if(title !==""&& desc!==""){
+if(title!=="" && desc!==""){
     setNotes((note) => {
         return(
             [...note,{
@@ -20,13 +19,12 @@ if(title !==""&& desc!==""){
                 id:new Date().getTime()
             }]
     )
-        })
+        }) 
+    }
+        settitle("");
+       setDesc("");            
     }
 
-
-settitle("");
-setDesc("");
-}
   return (
     <>
       <div className="container my-3">

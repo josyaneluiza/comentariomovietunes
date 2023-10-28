@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function EditModal({editls,notes,setNotes}) {
-    console.lod(editld);
+export default function EditModal({editld,notes,setNotes}) {
     const updateHandler=()=>{
        const updateNotes=notes.map((elem)=>{
 if(editld===elem.id){
@@ -23,7 +22,7 @@ if(editld===elem.id){
     <div className="modal-content">
       <div className="modal-header">
         <h5 className="modal-title" id="exampleModalLabel">Editar</h5>
-        <button type="button" className="close" data-dismiss="modal" aria-label="Fechar">
+        <button type="button" className="btn-close" data-dismiss="modal" aria-label="close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
