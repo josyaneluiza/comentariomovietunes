@@ -9,7 +9,7 @@ const [title,settitle] = useState("")
 const [desc,setDesc] = useState("") 
 const [notes,setNotes]=useState (getNotesFromLs)
 const[editld,seteditld]=useState("")
-localStorage.setltem("notes",JSON.stringify(notes))
+localStorage.setItem("notes",JSON.stringify(notes))
   return (
     <>
     <EditModal editld={editld} notes={notes} setNotes={setNotes}/>
@@ -37,7 +37,7 @@ localStorage.setltem("notes",JSON.stringify(notes))
     </>
   )
   function getNotesFromLs(){
-    const note=JSON.parse(localStorage.getltem("notes"));
+    const note=JSON.parse(localStorage.getItem("notes"));
     if(note){
       return note
     }else{
