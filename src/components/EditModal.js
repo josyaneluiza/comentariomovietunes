@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function EditModal({editld,notes,setNotes}) {
+export default function EditModal({editid,notes,setNotes}) {
     const updateHandler=()=>{
        const updateNotes=notes.map((elem)=>{
-if(editld===elem.id){
+if(editid===elem.id){
     return({
         ...elem,title:document.getElementById("edittitle").value,
     desc:document.getElementById("editdesc").value

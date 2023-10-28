@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Notes({element,notes,setNotes,seteditld}) {
+export default function Notes({element,notes,setNotes,seteditid}) {
     console.log(element);
     const removeHandler=(id)=>{
  const newNotes=notes.filter((elm)=>{
@@ -11,7 +11,7 @@ return elm;
     setNotes(newNotes)
     }
     const editHandler=(id)=>{
-        seteditld(id)
+        seteditid(id)
    notes.filter((elem)=>{
     if(elem.id===id){
       document.getElementById("edittitle").value=elem.title;

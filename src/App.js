@@ -8,11 +8,11 @@ export default function App() {
 const [title,settitle] = useState("") 
 const [desc,setDesc] = useState("") 
 const [notes,setNotes]=useState (getNotesFromLs)
-const[editld,seteditld]=useState("")
+const[editid,seteditid]=useState("")
 localStorage.setItem("notes",JSON.stringify(notes))
   return (
     <>
-    <EditModal editld={editld} notes={notes} setNotes={setNotes}/>
+    <EditModal editid={editid} notes={notes} setNotes={setNotes}/>
       <Navabr/>
       <Form title={title} settitle={settitle} desc={desc} setDesc={setDesc} notes={notes} setNotes={setNotes}/>
       <div className="container">
@@ -27,7 +27,7 @@ localStorage.setItem("notes",JSON.stringify(notes))
   </div>
 </div>:notes.map((element)=> {
   return(
-    <Notes element={element} key={element.id} notes={notes} setNotes={setNotes} seteditld={seteditld}/>
+    <Notes element={element} key={element.id} notes={notes} setNotes={setNotes} seteditid={seteditid}/>
   )
 })
 }
